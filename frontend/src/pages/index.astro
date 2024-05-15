@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import React from "react";
+import CardMain from '../components/CardMain';
+import AutoComplete from '../components/AutoComplete';
+
+import Button from '../components/ButtonLoadFile';	
+---
+
+<Layout title="GPR">
+	<main>
+		<CardMain text="Generador de Postales de Recuerdo" />
+	</main>
+	<div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'top', height: 'auto', marginTop: '20px' }}>
+		<AutoComplete client:visible />
+	</div>
+	
+	<div style={{ display: 'flex', justifyContent: 'center',flexDirection: 'column', alignItems: 'top', height: 'auto',marginTop: '20px'}}>
+		<Button client:visible />
+	</div>
+</Layout>
+
